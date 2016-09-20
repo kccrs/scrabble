@@ -13,28 +13,33 @@ describe('scoreWords()', function() {
     assert.isFunction(scoreWords);
   });
 
-  xit('should take a word and return the total score of that word', function() {
-
+  it('should take a word and return the total score of that word', function() {
+    var word = "a";
+    assert.equal(scoreWords(word), 1);
   });
 
-  xit('should return 8 as the score for the word "hello"', function() {
-
+  it('should return 8 as the score for the word "hello"', function() {
+    var newWord = 'hello';
+    assert.equal(scoreWords(newWord), 8);
   });
 
-  xit('should return 0 for an empty string, non-string, or null value', function() {
-
+  it('should return 0 for an empty string, non-string, or null value', function() {
+    var nullWord = null;
+    var emptyWord = '';
+    var nonStringWord = 1234;
+    assert.equal(scoreWords(nullWord), 0);
+    assert.equal(scoreWords(emptyWord), 0);
+    assert.equal(scoreWords(nonStringWord), 0);
   });
 
-  xit('should remove any whitespace before or after the word', function() {
-    // scoreWorld(' hello ') should be the same as scoreWord('hello').
+  it('should remove any whitespace before or after the word', function() {
+    var hello = 'hello';
+    var spaceHello = ' hello ';
+    assert.equal(scoreWords(hello), scoreWords(spaceHello));
   });
 
-  xit('should take an optional second argument for the word multiplier', function() {
-
+  it('should take an optional second argument for the word multiplier and return 16 if passed ("hello", 2) as both arguments', function() {
+    var hello = 'hello';
+    assert.equal(scoreWords(hello, 2), 16);
   });
-
-  xit('should return 16 if passed ("hello", 2) as both arguments', function() {
-
-  });
-
 });
