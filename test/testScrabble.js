@@ -23,8 +23,13 @@ describe('scoreWords()', function() {
     assert.equal(scoreWords(newWord), 8);
   });
 
-  xit('should return 0 for an empty string, non-string, or null value', function() {
-
+  it('should return 0 for an empty string, non-string, or null value', function() {
+    var nullWord = null;
+    var emptyWord = '';
+    var nonStringWord = 1234;
+    assert.equal(scoreWords(nullWord), 0);
+    assert.equal(scoreWords(emptyWord), 0);
+    assert.equal(scoreWords(nonStringWord), 0);
   });
 
   it('should remove any whitespace before or after the word', function() {
@@ -33,11 +38,8 @@ describe('scoreWords()', function() {
     assert.equal(scoreWords(hello), scoreWords(spaceHello));
   });
 
-  xit('should take an optional second argument for the word multiplier', function() {
-
-  });
-
-  xit('should return 16 if passed ("hello", 2) as both arguments', function() {
-
+  it('should take an optional second argument for the word multiplier and return 16 if passed ("hello", 2) as both arguments', function() {
+    var hello = 'hello';
+    assert.equal(scoreWords(hello, 2), 16);
   });
 });
