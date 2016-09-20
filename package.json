@@ -1,7 +1,7 @@
 {
-  "name": "Number Guesser React",
+  "name": "Scrabble",
   "version": "1.0.0",
-  "description": "Number Guesser In React.",
+  "description": "Scrabble",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kccrs/number-guesser-react"
+    "url": "https://github.com/kccrs/scrabble"
   },
   "author": "Casey Cross",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kccrs/number-guesser-react/issues"
+    "url": "https://github.com/kccrs/scrabble/issues"
   },
-  "homepage": "https://github.com/kccrs/number-guesser-react",
+  "homepage": "https://github.com/kccrs/scrabble",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.7.4",
