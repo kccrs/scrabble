@@ -13,12 +13,14 @@ describe('scoreWords()', function() {
     assert.isFunction(scoreWords);
   });
 
-  xit('should take a word and return the total score of that word', function() {
-
+  it('should take a word and return the total score of that word', function() {
+    var word = "a";
+    assert.equal(scoreWords(word), 1);
   });
 
-  xit('should return 8 as the score for the word "hello"', function() {
-
+  it('should return 8 as the score for the word "hello"', function() {
+    var newWord = "hello";
+    assert.equal(scoreWords(newWord), 8);
   });
 
   xit('should return 0 for an empty string, non-string, or null value', function() {
