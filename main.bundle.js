@@ -8183,8 +8183,21 @@
 
 	'use strict';
 
-	var React = __webpack_require__(299);
-	var ReactDOM = __webpack_require__(331);
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(331);
+
+	var _Application = __webpack_require__(469);
+
+	var _Application2 = _interopRequireDefault(_Application);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// require('./styles/style');
+
+	(0, _reactDom.render)(_react2.default.createElement(_Application2.default, null), document.getElementById('application'));
 
 /***/ },
 /* 299 */
@@ -29365,6 +29378,71 @@
 
 	module.exports = ReactDOMNullInputValuePropHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(294)))
+
+/***/ },
+/* 469 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(299);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var letterScores = {
+	  A: 1, B: 3, C: 3, D: 2,
+	  E: 1, F: 4, G: 2, H: 4,
+	  I: 1, J: 8, K: 5, L: 1,
+	  M: 3, N: 1, O: 1, P: 3,
+	  Q: 10, R: 1, S: 1, T: 1,
+	  U: 1, V: 4, W: 4, X: 8,
+	  Y: 4, Z: 10
+	};
+
+	var Application = function (_Component) {
+	  _inherits(Application, _Component);
+
+	  function Application() {
+	    _classCallCheck(this, Application);
+
+	    var _this = _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).call(this));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(Application, [{
+	    key: 'scoreWords',
+	    value: function scoreWords() {
+	      // scoreWord() takes a word and returns the total score of the word.
+	      // scoreWord('hello') should return 8.
+	      // An empty string or any non-string (e.g. scoreWord('') or scoreWord(null)) should return 0.
+	      // The function should strip any whitespace before or after the word. scoreWorld(' hello ') should be the same as scoreWord('hello').
+	      // Score word should take an optional second argument for the word multiplier. scoreWord('hello', 2) should return 16.
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {}
+	  }]);
+
+	  return Application;
+	}(_react.Component);
+
+	exports.default = Application;
 
 /***/ }
 /******/ ]);
