@@ -1,1 +1,1 @@
-require('./testScrabble');
+require('./testScrabble.js');
