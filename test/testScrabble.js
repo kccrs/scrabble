@@ -19,7 +19,7 @@ describe('scoreWords()', function() {
   });
 
   it('should return 8 as the score for the word "hello"', function() {
-    var newWord = "hello";
+    var newWord = 'hello';
     assert.equal(scoreWords(newWord), 8);
   });
 
@@ -27,8 +27,10 @@ describe('scoreWords()', function() {
 
   });
 
-  xit('should remove any whitespace before or after the word', function() {
-    // scoreWorld(' hello ') should be the same as scoreWord('hello').
+  it('should remove any whitespace before or after the word', function() {
+    var hello = 'hello';
+    var spaceHello = ' hello ';
+    assert.equal(scoreWords(hello), scoreWords(spaceHello));
   });
 
   xit('should take an optional second argument for the word multiplier', function() {
@@ -38,5 +40,4 @@ describe('scoreWords()', function() {
   xit('should return 16 if passed ("hello", 2) as both arguments', function() {
 
   });
-
 });
